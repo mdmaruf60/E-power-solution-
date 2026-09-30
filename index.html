@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E POWER SOLUTION — Emergency Light</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f5f6f8;color:#171717}
+.wrap{max-width:520px;margin:auto;background:#fff;min-height:100vh}
+.hero img,.gallery img{width:100%;display:block}.hero{background:#111}.brand{padding:18px 16px;background:#101828;color:#fff}
+.brand b{font-size:24px}.brand span{display:block;color:#ffd21a;font-size:13px;margin-top:4px}
+.offer{padding:18px 16px}.offer h1{font-size:28px;margin:0 0 8px}.offer p{margin:6px 0;color:#555}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.card{border:2px solid #ddd;border-radius:14px;padding:14px;background:#fff;cursor:pointer}
+.card.active{border-color:#e51b23;background:#fff7f7}.card h3{margin:0 0 7px}.price{font-size:27px;font-weight:800;color:#e51b23}.small{font-size:13px;color:#666}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:5px}.gallery img{height:170px;object-fit:cover}
+.features{padding:18px 16px;background:#101828;color:#fff}.features h2{margin-top:0}.features li{margin:9px 0}
+.form{padding:18px 16px}.form h2{margin-top:0}label{display:block;font-weight:700;margin:12px 0 6px}input,textarea,select{width:100%;padding:13px;border:1px solid #ccc;border-radius:9px;font-size:16px}textarea{min-height:85px}
+.total{margin:15px 0;padding:14px;background:#fff4d6;border-radius:10px;font-weight:700}.btn{width:100%;border:0;border-radius:10px;background:#e00000;color:#fff;padding:16px;font-size:19px;font-weight:800;cursor:pointer}
+.note{text-align:center;font-size:12px;color:#777;padding:12px 16px 25px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><b>E POWER SOLUTION</b><span>Quality Emergency Light • Cash on Delivery</span></div>
+  <div class="hero"><img src="product-main.png" alt="Emergency Light"></div>
+
+  <section class="offer">
+    <h1>Emergency Light</h1>
+    <p>সাদা রঙের Emergency Light — 2600 mAh লিথিয়াম ব্যাটারি।</p>
+    <div class="cards">
+      <div class="card active" data-pack="1" data-price="350" onclick="pick(1,350,this)">
+        <h3>১ পিস</h3><div class="price">৳350</div><div class="small">+ ৳120 Delivery</div>
+      </div>
+      <div class="card" data-pack="3" data-price="990" onclick="pick(3,990,this)">
+        <h3>৩ পিস অফার</h3><div class="price">৳990</div><div class="small">+ ৳120 Delivery</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery">
+    <img src="product-real.jpg" alt="Emergency Light front and back">
+    <img src="product-use.jpg" alt="Emergency Light switches">
+  </div>
+
+  <section class="features">
+    <h2>পণ্যের বৈশিষ্ট্য</h2>
+    <ul>
+      <li>2600 mAh লিথিয়াম ব্যাটারি</li>
+      <li>উজ্জ্বল আলো</li>
+      <li>সাদা রঙ</li>
+      <li>সহজে ব্যবহারযোগ্য ডিজাইন</li>
+      <li>Cash on Delivery</li>
+    </ul>
+  </section>
+
+  <section class="form">
+    <h2>অর্ডার করুন</h2>
+    <label>আপনার নাম</label><input id="name" placeholder="পূর্ণ নাম">
+    <label>মোবাইল নম্বর</label><input id="phone" inputmode="tel" placeholder="01XXXXXXXXX">
+    <label>ঠিকানা</label><textarea id="address" placeholder="বাড়ি/গ্রাম, থানা, জেলা"></textarea>
+    <label>অফার</label>
+    <select id="pack" onchange="changePack()">
+      <option value="1">১ পিস — ৳350</option>
+      <option value="3">৩ পিস — ৳990</option>
+    </select>
+    <div class="total" id="total">মোট: ৳470 (পণ্য ৳350 + ডেলিভারি ৳120)</div>
+    <button class="btn" onclick="order()">অর্ডার কনফার্ম করুন</button>
+  </section>
+  <div class="note">ঢাকা / নারায়ণগঞ্জ • WhatsApp: 01857140164</div>
+</div>
+
+<script>
+let selectedPack=1, selectedPrice=350, delivery=120;
+function pick(pack,price,el){
+  selectedPack=pack; selectedPrice=price;
+  document.querySelectorAll('.card').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('pack').value=String(pack);
+  updateTotal();
+}
+function changePack(){
+  const p=document.getElementById('pack').value;
+  selectedPack=Number(p); selectedPrice=p==="3"?990:350;
+  document.querySelectorAll('.card').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.card[data-pack="'+p+'"]').classList.add('active');
+  updateTotal();
+}
+function updateTotal(){
+  document.getElementById('total').textContent =
+    `মোট: ৳${selectedPrice+delivery} (পণ্য ৳${selectedPrice} + ডেলিভারি ৳${delivery})`;
+}
+function order(){
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const address=document.getElementById('address').value.trim();
+  if(!name||!phone||!address){alert('নাম, মোবাইল ও ঠিকানা পূরণ করুন।');return;}
+  const msg=`E POWER SOLUTION Emergency Light অর্ডার%0A%0Aনাম: ${encodeURIComponent(name)}%0Aমোবাইল: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aঅফার: ${selectedPack} পিস%0Aপণ্যের মূল্য: ৳${selectedPrice}%0Aডেলিভারি: ৳${delivery}%0Aমোট: ৳${selectedPrice+delivery}`;
+  window.open('https://wa.me/8801857140164?text='+msg,'_blank');
+}
+updateTotal();
+</script>
+</body>
+</html>
