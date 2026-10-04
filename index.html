@@ -1,104 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>E POWER SOLUTION — Emergency Light</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f59e0b">
+<meta name="description" content="E POWER SOLUTION — electronics, batteries, lighting and DIY products. Cash on Delivery across Bangladesh.">
+<title>E POWER SOLUTION — Smart Electronics</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f5f6f8;color:#171717}
-.wrap{max-width:520px;margin:auto;background:#fff;min-height:100vh}
-.hero img,.gallery img{width:100%;display:block}.hero{background:#111}.brand{padding:18px 16px;background:#101828;color:#fff}
-.brand b{font-size:24px}.brand span{display:block;color:#ffd21a;font-size:13px;margin-top:4px}
-.offer{padding:18px 16px}.offer h1{font-size:28px;margin:0 0 8px}.offer p{margin:6px 0;color:#555}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
-.card{border:2px solid #ddd;border-radius:14px;padding:14px;background:#fff;cursor:pointer}
-.card.active{border-color:#e51b23;background:#fff7f7}.card h3{margin:0 0 7px}.price{font-size:27px;font-weight:800;color:#e51b23}.small{font-size:13px;color:#666}
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:5px}.gallery img{height:170px;object-fit:cover}
-.features{padding:18px 16px;background:#101828;color:#fff}.features h2{margin-top:0}.features li{margin:9px 0}
-.form{padding:18px 16px}.form h2{margin-top:0}label{display:block;font-weight:700;margin:12px 0 6px}input,textarea,select{width:100%;padding:13px;border:1px solid #ccc;border-radius:9px;font-size:16px}textarea{min-height:85px}
-.total{margin:15px 0;padding:14px;background:#fff4d6;border-radius:10px;font-weight:700}.btn{width:100%;border:0;border-radius:10px;background:#e00000;color:#fff;padding:16px;font-size:19px;font-weight:800;cursor:pointer}
-.note{text-align:center;font-size:12px;color:#777;padding:12px 16px 25px}
+:root{--accent:#f59e0b;--accent2:#ffb52e;--ink:#111827;--muted:#667085;--line:#eceff3;--soft:#fff8eb;--green:#16a34a;--dark:#101214}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}.topbar{background:#111;color:#fff;font-size:13px}.topbar .container{display:flex;justify-content:space-between;gap:12px;padding:8px 0}.topbar b{color:#ffc14d}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand img{width:190px;height:58px;object-fit:contain;object-position:left center}.navlinks{display:flex;align-items:center;gap:26px;font-weight:700;font-size:14px}.navlinks a:hover{color:#d97706}.nav-actions{display:flex;gap:9px}.mini{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:10px 13px;font-weight:800;font-size:13px}.call{background:#111;color:#fff}.wa{background:#eaf8ef;color:#15803d}.hero{background:radial-gradient(circle at 80% 20%,#fff4d9 0,#fff 36%),linear-gradient(135deg,#fff,#fffaf0);padding:62px 0 45px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff3d7;color:#9a5a00;border:1px solid #ffe0a0;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(38px,5vw,66px);line-height:1.02;margin:17px 0 15px;letter-spacing:-2px}.hero h1 span{color:#e58a00}.hero p{font-size:17px;color:var(--muted);max-width:570px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{border:0;border-radius:14px;padding:13px 18px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn-primary{background:linear-gradient(135deg,#f59e0b,#ffb52e);color:#171717;box-shadow:0 10px 25px rgba(245,158,11,.22)}.btn-dark{background:#111;color:#fff}.hero-card{position:relative;background:#fff;border:1px solid #eee;border-radius:30px;padding:25px;box-shadow:0 25px 70px rgba(16,24,40,.10)}.hero-card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#fff3cf;right:-55px;top:-55px;z-index:0}.hero-card img{position:relative;z-index:1;width:100%;height:390px;object-fit:contain;border-radius:20px}.hero-badge{position:absolute;z-index:2;left:18px;bottom:18px;background:#111;color:#fff;border-radius:16px;padding:12px 15px;box-shadow:0 12px 30px #0002}.hero-badge b{color:#ffb52e;display:block;font-size:19px}
+.trust{padding:20px 0;border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.trust-item{display:flex;align-items:center;gap:10px;padding:13px;border-radius:15px;background:#fafafa}.trust-icon{width:35px;height:35px;border-radius:11px;background:#fff2cf;display:grid;place-items:center;font-size:18px}
+section{padding:72px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section-head h2{font-size:34px;margin:0;letter-spacing:-1px}.section-head p{margin:6px 0 0;color:var(--muted)}.offer{color:#a15d00;background:#fff3d7;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:800;white-space:nowrap}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{border:1px solid var(--line);border-radius:22px;background:#fff;overflow:hidden;box-shadow:0 10px 35px rgba(16,24,40,.055);transition:.25s}.product:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(16,24,40,.10)}.pimg{height:270px;background:#fafafa;position:relative;display:grid;place-items:center;padding:12px}.pimg img{width:100%;height:100%;object-fit:contain;border-radius:15px}.discount{position:absolute;top:14px;left:14px;background:#111;color:#fff;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800}.pbody{padding:18px}.pbody h3{margin:0 0 6px;font-size:19px}.short{font-size:13px;color:var(--muted);min-height:42px}.price{display:flex;align-items:center;gap:9px;margin:12px 0}.old{text-decoration:line-through;color:#98a2b3;font-size:14px}.new{font-size:23px;font-weight:900;color:#d97706}.unit{font-size:12px;color:#667085}.qtyrow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.qty{display:flex;align-items:center;border:1px solid #e3e6eb;border-radius:12px;overflow:hidden}.qty button{width:34px;height:36px;border:0;background:#fafafa;cursor:pointer;font-size:18px}.qty span{width:38px;text-align:center;font-weight:800}.pactions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.details-btn{background:#f7f7f7;color:#222}.order-btn{background:#111;color:#fff}
+.why{background:#111;color:#fff}.why .section-head p{color:#aeb4bf}.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.why-card{border:1px solid #2b2e33;background:#17191c;border-radius:20px;padding:22px}.why-card .ico{font-size:27px;margin-bottom:12px}.why-card h3{margin:0 0 6px}.why-card p{margin:0;color:#aeb4bf;font-size:13px}
+.delivery{background:#fffaf1}.delivery-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.delivery-card{background:#fff;border:1px solid #f1dfbb;border-radius:22px;padding:25px}.delivery-card h3{margin-top:0}.charge{font-size:29px;font-weight:900;color:#d97706}.note{color:var(--muted);font-size:13px}
+.contact{padding-bottom:80px}.contact-box{background:linear-gradient(135deg,#111,#242424);color:#fff;border-radius:28px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact-box h2{margin:0 0 8px}.contact-box p{margin:0;color:#c9cdd3}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.contact-actions .btn-primary{color:#171717}.fb{background:#fff;color:#111}
+footer{background:#0b0c0d;color:#aeb4bf;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{color:#fff;font-weight:900;letter-spacing:1px}.footer-brand span{color:#ffb52e}.footer-links{display:flex;gap:18px;font-size:13px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:100}.modal.show{display:flex}.modal-box{background:#fff;border-radius:24px;width:min(760px,100%);max-height:92vh;overflow:auto;box-shadow:0 30px 80px #0005}.modal-head{display:flex;justify-content:space-between;gap:15px;padding:18px 20px;border-bottom:1px solid var(--line);align-items:center}.close{border:0;background:#f3f4f6;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:20px}.modal-body{padding:20px}.detail-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.detail-img{background:#fafafa;border-radius:18px;min-height:330px;display:grid;place-items:center;padding:10px}.detail-img img{height:320px;width:100%;object-fit:contain}.detail-body h2{margin-top:0}.bullets{padding-left:20px;color:#555}.order-form{display:grid;gap:11px;margin-top:20px}.order-form input,.order-form textarea,.order-form select{width:100%;border:1px solid #ddd;border-radius:12px;padding:12px;background:#fff;outline:none}.order-form textarea{min-height:80px;resize:vertical}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.summary{background:#fff8eb;border:1px solid #ffe0a0;border-radius:15px;padding:13px}.summary-row{display:flex;justify-content:space-between;gap:10px}.sticky-mobile{display:none}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card img{height:320px}.products{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}.trust-grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.detail-grid{grid-template-columns:1fr}.contact-box{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.topbar .container{justify-content:center}.topbar .container span:first-child{display:none}.nav{min-height:64px}.brand img{width:155px;height:50px}.nav-actions .mini{padding:9px 10px}.hero{padding:38px 0 28px}.hero h1{font-size:43px}.hero p{font-size:15px}.hero-card img{height:280px}.trust-grid,.products,.why-grid,.delivery-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.section-head h2{font-size:29px}.pimg{height:250px}.pactions{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.contact-box{padding:25px}.footer-row{flex-direction:column;align-items:flex-start}.sticky-mobile{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;z-index:80;background:#fff;border-top:1px solid #ddd;padding:8px;gap:8px;box-shadow:0 -8px 25px #0001}.sticky-mobile a{padding:12px;border-radius:12px;text-align:center;font-weight:900}.sticky-call{background:#111;color:#fff}.sticky-wa{background:#eaf8ef;color:#15803d}body{padding-bottom:65px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="brand"><b>E POWER SOLUTION</b><span>Quality Emergency Light • Cash on Delivery</span></div>
-  <div class="hero"><img src="product-main.png" alt="Emergency Light"></div>
-
-  <section class="offer">
-    <h1>Emergency Light</h1>
-    <p>সাদা রঙের Emergency Light — 2600 mAh লিথিয়াম ব্যাটারি।</p>
-    <div class="cards">
-      <div class="card active" data-pack="1" data-price="350" onclick="pick(1,350,this)">
-        <h3>১ পিস</h3><div class="price">৳350</div><div class="small">+ ৳120 Delivery</div>
-      </div>
-      <div class="card" data-pack="3" data-price="990" onclick="pick(3,990,this)">
-        <h3>৩ পিস অফার</h3><div class="price">৳990</div><div class="small">+ ৳120 Delivery</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gallery">
-    <img src="product-real.jpg" alt="Emergency Light front and back">
-    <img src="product-use.jpg" alt="Emergency Light switches">
-  </div>
-
-  <section class="features">
-    <h2>পণ্যের বৈশিষ্ট্য</h2>
-    <ul>
-      <li>2600 mAh লিথিয়াম ব্যাটারি</li>
-      <li>উজ্জ্বল আলো</li>
-      <li>সাদা রঙ</li>
-      <li>সহজে ব্যবহারযোগ্য ডিজাইন</li>
-      <li>Cash on Delivery</li>
-    </ul>
-  </section>
-
-  <section class="form">
-    <h2>অর্ডার করুন</h2>
-    <label>আপনার নাম</label><input id="name" placeholder="পূর্ণ নাম">
-    <label>মোবাইল নম্বর</label><input id="phone" inputmode="tel" placeholder="01XXXXXXXXX">
-    <label>ঠিকানা</label><textarea id="address" placeholder="বাড়ি/গ্রাম, থানা, জেলা"></textarea>
-    <label>অফার</label>
-    <select id="pack" onchange="changePack()">
-      <option value="1">১ পিস — ৳350</option>
-      <option value="3">৩ পিস — ৳990</option>
-    </select>
-    <div class="total" id="total">মোট: ৳470 (পণ্য ৳350 + ডেলিভারি ৳120)</div>
-    <button class="btn" onclick="order()">অর্ডার কনফার্ম করুন</button>
-  </section>
-  <div class="note">ঢাকা / নারায়ণগঞ্জ • WhatsApp: 01857140164</div>
-</div>
-
+<div class="topbar"><div class="container"><span>বাংলাদেশজুড়ে Cash on Delivery</span><b>Call / WhatsApp: 01857140164</b></div></div>
+<header><div class="container nav"><a class="brand" href="#home"><img src="images/logo-header.png" alt="E POWER SOLUTION"></a><nav class="navlinks"><a href="#products">Products</a><a href="#why">Why Us</a><a href="#delivery">Delivery</a><a href="#contact">Contact</a></nav><div class="nav-actions"><a class="mini call" href="tel:+8801857140164">Call</a><a class="mini wa" href="https://wa.me/8801857140164" target="_blank">WhatsApp</a></div></div></header>
+<main id="home">
+<section class="hero"><div class="container hero-grid"><div><span class="eyebrow">⚡ E POWER SOLUTION</span><h1>Smart Electronics.<br><span>Better Price.</span></h1><p>প্রয়োজনীয় electronics, battery, lighting ও DIY products — সহজ অর্ডার, Cash on Delivery এবং দ্রুত ডেলিভারি।</p><div class="hero-actions"><a class="btn btn-primary" href="#products">Shop Products →</a><a class="btn btn-dark" href="https://wa.me/8801857140164?text=Assalamu%20Alaikum%2C%20E%20POWER%20SOLUTION%20থেকে%20পণ্য%20অর্ডার%20করতে%20চাই।" target="_blank">WhatsApp Order</a></div></div><div class="hero-card"><img src="images/dc-table-light.jpg" alt="DC Table Light"><div class="hero-badge"><small>Featured Product</small><b>DC Table Light</b><small>800৳ · COD</small></div></div></div></section>
+<div class="trust"><div class="container trust-grid"><div class="trust-item"><span class="trust-icon">✓</span><div><b>Quality</b><br><small>Selected Products</small></div></div><div class="trust-item"><span class="trust-icon">৳</span><div><b>COD</b><br><small>Pay on delivery</small></div></div><div class="trust-item"><span class="trust-icon">🚚</span><div><b>Fast Delivery</b><br><small>Bangladesh wide</small></div></div><div class="trust-item"><span class="trust-icon">⚡</span><div><b>Easy Order</b><br><small>Call / WhatsApp</small></div></div></div></div>
+<section id="products"><div class="container"><div class="section-head"><div><h2>Special Offers</h2><p>জনপ্রিয় electronics ও DIY products এক জায়গায়।</p></div><span class="offer">LIMITED PRICE</span></div><div id="productGrid" class="products"></div></div></section>
+<section id="why" class="why"><div class="container"><div class="section-head"><div><h2>Why E POWER SOLUTION?</h2><p>সোজা কথা, পরিষ্কার দাম, সহজ অর্ডার।</p></div></div><div class="why-grid"><div class="why-card"><div class="ico">⚡</div><h3>Quality Products</h3><p>প্রয়োজনীয় electronics ও DIY items carefully selected.</p></div><div class="why-card"><div class="ico">৳</div><h3>Cash on Delivery</h3><p>পণ্য হাতে পাওয়ার পর payment করুন।</p></div><div class="why-card"><div class="ico">🚚</div><h3>Fast Delivery</h3><p>ঢাকা ও ঢাকার বাইরে delivery সুবিধা।</p></div><div class="why-card"><div class="ico">💬</div><h3>Easy Support</h3><p>Call বা WhatsApp-এ সরাসরি যোগাযোগ করুন।</p></div></div></div></section>
+<section id="delivery" class="delivery"><div class="container"><div class="section-head"><div><h2>Delivery & Payment</h2><p>অর্ডারের সময় আপনার এলাকা নির্বাচন করুন।</p></div></div><div class="delivery-grid"><div class="delivery-card"><h3>Delivery Charge</h3><div class="charge">ঢাকা 80৳</div><p class="note">ঢাকার বাইরে: <b>120৳</b></p></div><div class="delivery-card"><h3>Payment</h3><div class="charge">Cash on Delivery</div><p class="note">পণ্য গ্রহণের সময় payment করবেন।</p></div></div></div></section>
+<section id="contact" class="contact"><div class="container"><div class="contact-box"><div><h2>অর্ডার করতে যোগাযোগ করুন</h2><p>01857140164 — Call, WhatsApp অথবা Facebook</p></div><div class="contact-actions"><a class="btn btn-primary" href="tel:+8801857140164">Call Now</a><a class="btn" style="background:#19a463;color:#fff" href="https://wa.me/8801857140164" target="_blank">WhatsApp</a><a class="btn fb" href="https://www.facebook.com/share/18bKw6kg1f/" target="_blank">Facebook</a></div></div></div></section>
+</main>
+<footer><div class="container footer-row"><div class="footer-brand">E <span>POWER</span> SOLUTION</div><div class="footer-links"><a href="#products">Products</a><a href="#delivery">Delivery</a><a href="#contact">Contact</a></div><small>© 2026 E POWER SOLUTION</small></div></footer>
+<div class="sticky-mobile"><a class="sticky-call" href="tel:+8801857140164">📞 Call</a><a class="sticky-wa" href="https://wa.me/8801857140164" target="_blank">WhatsApp</a></div>
+<div id="detailModal" class="modal"><div class="modal-box"><div class="modal-head"><b id="modalTitle">Product Details</b><button class="close" onclick="closeModal()">×</button></div><div class="modal-body"><div class="detail-grid"><div class="detail-img"><img id="modalImage" src="" alt=""></div><div class="detail-body"><h2 id="modalProduct"></h2><div id="modalPrice" class="price"></div><ul id="modalDetails" class="bullets"></ul><div class="qtyrow"><span>Quantity</span><div class="qty"><button onclick="changeModalQty(-1)">−</button><span id="modalQty">1</span><button onclick="changeModalQty(1)">+</button></div></div><button class="btn btn-primary" style="width:100%;margin-top:15px" onclick="openOrderFromModal()">Order Now</button></div></div></div></div></div>
+<div id="orderModal" class="modal"><div class="modal-box"><div class="modal-head"><b>Order Details</b><button class="close" onclick="closeOrder()">×</button></div><div class="modal-body"><div class="summary"><div class="summary-row"><span>Product</span><b id="orderProduct"></b></div><div class="summary-row"><span>Quantity</span><b id="orderQty"></b></div><div class="summary-row"><span>Product Total</span><b id="productTotal"></b></div><div class="summary-row"><span>Delivery</span><b id="deliveryTotal">80৳</b></div><hr><div class="summary-row"><strong>Total</strong><strong id="grandTotal"></strong></div></div><form class="order-form" onsubmit="submitOrder(event)"><input id="name" required placeholder="আপনার নাম"><div class="form-grid"><input id="mobile" required type="tel" placeholder="মোবাইল নম্বর"><select id="area" onchange="updateOrderTotal()"><option value="dhaka">ঢাকার ভিতরে — 80৳</option><option value="outside">ঢাকার বাইরে — 120৳</option></select></div><textarea id="address" required placeholder="সম্পূর্ণ ঠিকানা"></textarea><div class="form-grid"><input id="district" required placeholder="জেলা"><input id="thana" required placeholder="থানা / উপজেলা"></div><button class="btn btn-primary" style="width:100%" type="submit">WhatsApp-এ Order পাঠান</button></form></div></div></div>
 <script>
-let selectedPack=1, selectedPrice=350, delivery=120;
-function pick(pack,price,el){
-  selectedPack=pack; selectedPrice=price;
-  document.querySelectorAll('.card').forEach(x=>x.classList.remove('active'));
-  el.classList.add('active');
-  document.getElementById('pack').value=String(pack);
-  updateTotal();
-}
-function changePack(){
-  const p=document.getElementById('pack').value;
-  selectedPack=Number(p); selectedPrice=p==="3"?990:350;
-  document.querySelectorAll('.card').forEach(x=>x.classList.remove('active'));
-  document.querySelector('.card[data-pack="'+p+'"]').classList.add('active');
-  updateTotal();
-}
-function updateTotal(){
-  document.getElementById('total').textContent =
-    `মোট: ৳${selectedPrice+delivery} (পণ্য ৳${selectedPrice} + ডেলিভারি ৳${delivery})`;
-}
-function order(){
-  const name=document.getElementById('name').value.trim();
-  const phone=document.getElementById('phone').value.trim();
-  const address=document.getElementById('address').value.trim();
-  if(!name||!phone||!address){alert('নাম, মোবাইল ও ঠিকানা পূরণ করুন।');return;}
-  const msg=`E POWER SOLUTION Emergency Light অর্ডার%0A%0Aনাম: ${encodeURIComponent(name)}%0Aমোবাইল: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aঅফার: ${selectedPack} পিস%0Aপণ্যের মূল্য: ৳${selectedPrice}%0Aডেলিভারি: ৳${delivery}%0Aমোট: ৳${selectedPrice+delivery}`;
-  window.open('https://wa.me/8801857140164?text='+msg,'_blank');
-}
-updateTotal();
+const products=[
+{id:1,name:'DC Table Light',old:990,price:800,max:10,img:'images/dc-table-light.jpg',details:['2600mAh Brand New Battery','ফুল ব্রাইটনেসে প্রায় ৩–৪ ঘণ্টা চলবে','Type-C Charging Port','On/Off Switch','বাসা, দোকান ও জরুরি ব্যবহারের জন্য উপযোগী।']},
+{id:2,name:'Filament LED',old:30,price:25,max:500,img:'images/filament-led.jpg',details:['স্টাইলিশ Filament LED','বিভিন্ন কালারের আলো','ইলেকট্রনিক্স ও DIY কাজে ব্যবহারযোগ্য','প্রতি পিস 25৳।']},
+{id:3,name:'DIY Table Fan',old:1500,price:1200,max:20,img:'images/diy-fan.png',details:['কমপ্যাক্ট DIY Fan','DIY ও personal cooling project-এর জন্য','সহজে ব্যবহারযোগ্য','ছোট electronics project-এর জন্য উপযোগী।']},
+{id:4,name:'Panasonic NCR18650 Li-ion Battery',old:null,price:190,max:null,img:'images/ncr18650.png',details:['3.7V Li-ion cell','NCR18650 series','Battery project, power bank ও DIY কাজে ব্যবহারযোগ্য','Capacity/condition product অনুযায়ী যাচাই করে নিন।']},
+{id:5,name:'USB Type-C Female Port',old:null,price:20,max:null,img:'images/type-c-port.png',details:['USB Type-C female connector','Charging ও power connection কাজে ব্যবহারযোগ্য','DIY electronics ও battery project-এর জন্য উপযোগী','প্রতি পিস 20৳।']},
+{id:6,name:'TP4056 1A Li-ion Charging Module',old:null,price:30,max:null,img:'images/tp4056.png',details:['3.7V Li-ion battery charging module','1A charging module','Overcharge protection version','5V USB input','DIY battery project-এর জন্য উপযোগী।']}
+];
+let activeProduct=null,activeQty=1,orderProductData=null,orderQty=1;
+function money(n){return n+'৳'}
+function renderProducts(){document.getElementById('productGrid').innerHTML=products.map(p=>{let disc=p.old?Math.round((1-p.price/p.old)*100):0;return `<article class="product"><div class="pimg">${disc?`<span class="discount">-${disc}% OFF</span>`:''}<img src="${p.img}" alt="${p.name}"></div><div class="pbody"><h3>${p.name}</h3><div class="short">${p.details[0]} · ${p.details[1]}</div><div class="price">${p.old?`<span class="old">${money(p.old)}</span>`:''}<span class="new">${money(p.price)}</span><span class="unit">/ piece</span></div><div class="qtyrow"><span>${p.max ? `Max: ${p.max}` : 'Quantity'}</span><div class="qty"><button onclick="cardQty(${p.id},-1)">−</button><span id="qty-${p.id}">1</span><button onclick="cardQty(${p.id},1)">+</button></div></div><div class="pactions"><button class="btn details-btn" onclick="showDetails(${p.id})">View Details</button><button class="btn order-btn" onclick="startOrder(${p.id})">Order Now</button></div></div></article>`}).join('')}
+function cardQty(id,d){let p=products.find(x=>x.id===id),el=document.getElementById('qty-'+id),q=Math.max(1,Math.min(p.max || 999,(+el.textContent||1)+d));el.textContent=q}
+function showDetails(id){activeProduct=products.find(x=>x.id===id);activeQty=1;document.getElementById('modalTitle').textContent=activeProduct.name;document.getElementById('modalProduct').textContent=activeProduct.name;document.getElementById('modalImage').src=activeProduct.img;document.getElementById('modalImage').alt=activeProduct.name;document.getElementById('modalPrice').innerHTML=`${activeProduct.old?`<span class="old">${money(activeProduct.old)}</span>`:''}<span class="new">${money(activeProduct.price)}</span>`;document.getElementById('modalDetails').innerHTML=activeProduct.details.map(x=>`<li>${x}</li>`).join('');document.getElementById('modalQty').textContent=1;document.getElementById('detailModal').classList.add('show')}
+function closeModal(){document.getElementById('detailModal').classList.remove('show')}
+function changeModalQty(d){if(!activeProduct)return;activeQty=Math.max(1,Math.min(activeProduct.max || 999,activeQty+d));document.getElementById('modalQty').textContent=activeQty}
+function openOrderFromModal(){closeModal();orderProductData=activeProduct;orderQty=activeQty;fillOrder()}
+function startOrder(id){let p=products.find(x=>x.id===id),q=+(document.getElementById('qty-'+id).textContent||1);orderProductData=p;orderQty=q;fillOrder()}
+function fillOrder(){document.querySelector('#orderModal form').reset();document.getElementById('area').value='dhaka';document.getElementById('orderProduct').textContent=orderProductData.name;document.getElementById('orderQty').textContent=orderQty;document.getElementById('productTotal').textContent=money(orderProductData.price*orderQty);document.getElementById('orderModal').classList.add('show');updateOrderTotal()}
+function updateOrderTotal(){let d=document.getElementById('area').value==='outside'?120:80;document.getElementById('deliveryTotal').textContent=money(d);document.getElementById('grandTotal').textContent=money(orderProductData.price*orderQty+d)}
+function closeOrder(){document.getElementById('orderModal').classList.remove('show')}
+function submitOrder(e){e.preventDefault();let area=document.getElementById('area').value==='outside'?'ঢাকার বাইরে':'ঢাকার ভিতরে';let delivery=area==='ঢাকার বাইরে'?120:80;let total=orderProductData.price*orderQty+delivery;let text=`E POWER SOLUTION - Order%0A%0AProduct: ${orderProductData.name}%0AQuantity: ${orderQty}%0AProduct Price: ${orderProductData.price}৳%0AProduct Total: ${orderProductData.price*orderQty}৳%0ADelivery: ${delivery}৳ (${area})%0ATotal: ${total}৳%0A%0AName: ${document.getElementById('name').value}%0AMobile: ${document.getElementById('mobile').value}%0AAddress: ${document.getElementById('address').value}%0ADistrict: ${document.getElementById('district').value}%0AThana/Upazila: ${document.getElementById('thana').value}`;window.open('https://wa.me/8801857140164?text='+encodeURIComponent(decodeURIComponent(text)),'_blank');closeOrder()}
+window.addEventListener('click',e=>{if(e.target.id==='detailModal')closeModal();if(e.target.id==='orderModal')closeOrder()});renderProducts();
 </script>
-</body>
-</html>
+</body></html>
