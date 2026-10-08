@@ -1,131 +1,253 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="E POWER SOLUTION — Premium rechargeable emergency and DC lights.">
-  <title>E POWER SOLUTION | Premium Lights</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#f5f6f3;--card:#fff;--ink:#111714;--muted:#66706a;--accent:#d6a900;--green:#123d2d;--line:#e4e7e2}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind Siliguri",sans-serif}
-    a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 18px}
-    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-    .brand{font-family:Inter,sans-serif;font-weight:800;letter-spacing:2px;font-size:20px}.brand span{display:block;font-size:9px;letter-spacing:5px;text-align:center;margin-top:1px}
-    .navbtn{border:1px solid #d8ddd8;border-radius:999px;padding:9px 15px;font-weight:600;background:#fff}
-    .hero{padding:54px 0 30px;text-align:center}.eyebrow{display:inline-block;border:1px solid #d8ddd8;border-radius:999px;padding:6px 14px;font-size:13px;color:var(--green);background:#fff}
-    h1{font-family:Inter,sans-serif;font-size:clamp(32px,6vw,58px);line-height:1.03;margin:17px 0 12px;letter-spacing:-2px}.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px}
-    .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:25px 0 65px}
-    .product{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(16,27,20,.07)}
-    .poster{width:100%;display:block;aspect-ratio:1/1;object-fit:cover;background:#eee}.body{padding:20px}.tag{font-size:12px;color:var(--green);font-weight:700;letter-spacing:1px}
-    h2{font-size:25px;margin:5px 0 8px}.desc{color:var(--muted);min-height:52px;margin:0 0 13px;line-height:1.55}
-    .price{display:flex;align-items:end;gap:10px;margin:5px 0 16px}.old{text-decoration:line-through;color:#8c938e;font-size:16px}.new{font-family:Inter,sans-serif;font-size:29px;font-weight:800;color:var(--green)}
-    .qty{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:13px;padding:6px 8px;margin-bottom:12px}.qty button{width:38px;height:38px;border:0;border-radius:10px;background:#edf1ed;font-size:22px;cursor:pointer}.qty input{width:55px;border:0;text-align:center;font-size:17px;font-weight:700;background:transparent;outline:0}
-    .cart{width:100%;border:0;border-radius:13px;padding:13px;background:var(--green);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
-    .cart:hover{filter:brightness(1.08)}
-    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 55px}.info div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;text-align:center}.info b{display:block;font-size:16px}.info small{color:var(--muted)}
-    footer{background:#0d1914;color:#fff;padding:35px 0}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot small{color:#b9c2bd}.actions{display:flex;gap:10px}.action{padding:11px 15px;border-radius:12px;background:#fff;color:#111;font-weight:700}
-    .cartbar{position:fixed;right:18px;bottom:18px;z-index:20;background:var(--green);color:#fff;border-radius:999px;padding:13px 18px;box-shadow:0 10px 30px rgba(0,0,0,.2);font-weight:700;display:none}
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:30}.modal.open{display:flex}.sheet{width:min(620px,100%);background:#fff;border-radius:24px 24px 0 0;padding:22px}.sheet h3{margin:0 0 8px;font-size:24px}.orderline{background:#f4f6f4;border-radius:13px;padding:12px;margin:10px 0}.field{width:100%;padding:13px;border:1px solid #d9dedb;border-radius:12px;margin:6px 0;font:inherit}.submit{width:100%;border:0;border-radius:13px;background:var(--green);color:#fff;padding:14px;font-size:17px;font-weight:700;margin-top:8px}
-    @media(max-width:760px){.products{grid-template-columns:1fr;gap:18px}.info{grid-template-columns:1fr}.foot{flex-direction:column;align-items:flex-start}.hero{padding-top:38px}.poster{aspect-ratio:auto}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E POWER SOLUTION</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f6f8;
+  color:#222;
+}
+
+.header{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+.header h1{
+  margin:0;
+  font-size:28px;
+  letter-spacing:1px;
+}
+
+.header p{
+  margin:8px 0 0;
+  color:#d1d5db;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px 12px;
+}
+
+.product{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.10);
+}
+
+.product-image{
+  width:100%;
+  min-height:250px;
+  background:#eee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  color:#777;
+}
+
+.product-image img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.info{
+  padding:20px;
+}
+
+.offer{
+  display:inline-block;
+  background:#ef4444;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+h2{
+  margin:12px 0;
+  font-size:24px;
+}
+
+.old-price{
+  color:#888;
+  text-decoration:line-through;
+  font-size:18px;
+}
+
+.new-price{
+  font-size:30px;
+  font-weight:bold;
+  margin:5px 0 18px;
+}
+
+.quantity{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+  margin-bottom:12px;
+  background:white;
+}
+
+.order-button{
+  width:100%;
+  display:block;
+  padding:15px;
+  border:0;
+  border-radius:10px;
+  background:#16a34a;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.footer{
+  text-align:center;
+  padding:25px;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
-<header><div class="wrap nav">
-  <div class="brand">E POWER<span>SOLUTION</span></div>
-  <a class="navbtn" href="#products">Products</a>
-</div></header>
 
-<main>
-<section class="hero wrap">
-  <span class="eyebrow">E POWER SOLUTION</span>
-  <h1>আলো থাকুক, প্রয়োজনের সময়ও।</h1>
-  <p>Premium rechargeable lighting — সুন্দর ডিজাইন, ব্যবহারিক সুবিধা এবং নির্ভরযোগ্য ব্যাকআপ একসাথে।</p>
-</section>
+<div class="header">
+  <h1>E POWER SOLUTION</h1>
+  <p>Quality Electronics & Lighting Solutions</p>
+</div>
 
-<section id="products" class="wrap products">
-  <article class="product">
-    <img class="poster" src="emergency-light.png" alt="Premium Emergency Light">
-    <div class="body">
-      <div class="tag">PREMIUM • EMERGENCY LIGHT</div>
-      <h2>প্রিমিয়াম ইমার্জেন্সি লাইট</h2>
-      <p class="desc">লেজার কাটিং বোর্ডের তৈরি প্রিমিয়াম বডি, উজ্জ্বল আলো এবং প্রায় ৩–৪ ঘণ্টা ব্যাকআপ।</p>
-      <div class="price"><span class="old">৳790</span><span class="new">৳599</span></div>
-      <div class="qty"><button onclick="changeQty(0,-1)">−</button><input id="q0" value="1" readonly><button onclick="changeQty(0,1)">+</button></div>
-      <button class="cart" onclick="addToCart(0)">Add to Cart</button>
-    </div>
-  </article>
 
-  <article class="product">
-    <img class="poster" src="dc-table-light.png" alt="Rechargeable DC Table Light">
-    <div class="body">
-      <div class="tag">RECHARGEABLE • DC LIGHT</div>
-      <h2>রিচার্জেবল DC টেবিল লাইট</h2>
-      <p class="desc">2600mAh ব্যাটারি, Type-C charging, On/Off switch এবং ৩–৪ ঘণ্টা ব্যাকআপ।</p>
-      <div class="price"><span class="old">৳990</span><span class="new">৳799</span></div>
-      <div class="qty"><button onclick="changeQty(1,-1)">−</button><input id="q1" value="1" readonly><button onclick="changeQty(1,1)">+</button></div>
-      <button class="cart" onclick="addToCart(1)">Add to Cart</button>
-    </div>
-  </article>
-</section>
+<div class="container">
 
-<section class="wrap info">
-  <div><b>ঢাকার ভিতরে ৳80</b><small>ডেলিভারি চার্জ</small></div>
-  <div><b>ঢাকার বাইরে ৳120</b><small>ডেলিভারি চার্জ</small></div>
-  <div><b>Cash on Delivery</b><small>পণ্য হাতে পেয়ে পেমেন্ট</small></div>
-</section>
-</main>
+<!-- PRODUCT 1 -->
 
-<div id="cartbar" class="cartbar" onclick="openOrder()">Cart: <span id="cartCount">0</span> item</div>
+<div class="product">
 
-<div id="modal" class="modal" onclick="if(event.target===this)closeOrder()">
-  <div class="sheet">
-    <h3>আপনার অর্ডার</h3><div id="summary"></div>
-    <input id="name" class="field" placeholder="আপনার নাম">
-    <input id="phone" class="field" placeholder="মোবাইল নম্বর">
-    <textarea id="address" class="field" rows="3" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
-    <select id="area" class="field"><option value="dhaka">ঢাকার ভিতরে — Delivery ৳80</option><option value="outside">ঢাকার বাইরে — Delivery ৳120</option></select>
-    <button class="submit" onclick="sendOrder()">WhatsApp-এ অর্ডার করুন</button>
+  <div class="product-image">
+    <span>Emergency Light</span>
+  </div>
+
+  <div class="info">
+
+    <span class="offer">SPECIAL OFFER</span>
+
+    <h2>Emergency Light</h2>
+
+    <div class="old-price">৳790</div>
+    <div class="new-price">৳599</div>
+
+    <select class="quantity" id="qty1">
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+
+    <button class="order-button" onclick="orderProduct('Emergency Light',599,'qty1')">
+      ORDER NOW
+    </button>
+
   </div>
 </div>
 
-<footer><div class="wrap foot">
-  <div><b>E POWER SOLUTION</b><br><small>Premium lighting &amp; electronics</small></div>
-  <div class="actions">
-    <a class="action" href="tel:01857140164">Call</a>
-    <a class="action" href="https://wa.me/8801857140164" target="_blank">WhatsApp</a>
+
+<!-- PRODUCT 2 -->
+
+<div class="product">
+
+  <div class="product-image">
+    <span>LED Light</span>
   </div>
-</div></footer>
+
+  <div class="info">
+
+    <span class="offer">SPECIAL OFFER</span>
+
+    <h2>LED Light</h2>
+
+    <div class="old-price">৳990</div>
+    <div class="new-price">৳799</div>
+
+    <select class="quantity" id="qty2">
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+
+    <button class="order-button" onclick="orderProduct('LED Light',799,'qty2')">
+      ORDER NOW
+    </button>
+
+  </div>
+</div>
+
+</div>
+
+
+<div class="footer">
+  © 2026 E POWER SOLUTION
+</div>
+
 
 <script>
-const products=[
- {name:"প্রিমিয়াম ইমার্জেন্সি লাইট",price:599},
- {name:"রিচার্জেবল DC টেবিল লাইট",price:799}
-];
-let cart=[0,0];
 
-function changeQty(i,d){let el=document.getElementById("q"+i);let n=Math.max(1,Math.min(20,Number(el.value)+d));el.value=n}
-function addToCart(i){cart[i]+=Number(document.getElementById("q"+i).value);updateCart();alert("কার্টে যোগ হয়েছে");}
-function updateCart(){let n=cart.reduce((a,b)=>a+b,0);document.getElementById("cartCount").textContent=n;document.getElementById("cartbar").style.display=n?"block":"none"}
-function openOrder(){
- let rows="",total=0;
- cart.forEach((q,i)=>{if(q){let s=q*products[i].price;total+=s;rows+=`<div class="orderline"><b>${products[i].name}</b><br>${q} × ৳${products[i].price} = <b>৳${s}</b></div>`}});
- document.getElementById("summary").innerHTML=rows+`<div class="orderline"><b>পণ্যের মোট: ৳${total}</b></div>`;
- document.getElementById("modal").classList.add("open")
+function orderProduct(product,price,quantityId){
+
+  let quantity =
+    document.getElementById(quantityId).value;
+
+  let total = price * quantity;
+
+  let message =
+    "আমি অর্ডার করতে চাই\n\n" +
+    "পণ্য: " + product + "\n" +
+    "দাম: ৳" + price + "\n" +
+    "পরিমাণ: " + quantity + "\n" +
+    "মোট: ৳" + total;
+
+  let whatsapp =
+    "https://wa.me/8801857140164?text=" +
+    encodeURIComponent(message);
+
+  window.open(whatsapp,"_blank");
 }
-function closeOrder(){document.getElementById("modal").classList.remove("open")}
-function sendOrder(){
- const name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),address=document.getElementById("address").value.trim(),area=document.getElementById("area").value;
- if(!name||!phone||!address){alert("নাম, মোবাইল ও ঠিকানা দিন।");return}
- let total=0,lines=[];
- cart.forEach((q,i)=>{if(q){let s=q*products[i].price;total+=s;lines.push(`${products[i].name} — ${q} pcs × ৳${products[i].price} = ৳${s}`)}});
- const delivery=area==="dhaka"?80:120;
- const msg=`E POWER SOLUTION Order%0A%0A${lines.join("%0A")}%0A%0Aপণ্যের মোট: ৳${total}%0Aডেলিভারি: ৳${delivery}%0Aসর্বমোট: ৳${total+delivery}%0A%0Aনাম: ${encodeURIComponent(name)}%0Aমোবাইল: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}`;
- window.open("https://wa.me/8801857140164?text="+msg,"_blank");
-}
+
 </script>
+
 </body>
 </html>
